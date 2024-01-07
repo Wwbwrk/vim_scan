@@ -6,13 +6,14 @@
 name: "CodeQL"
 
 on:
-  push:
-    branches: [master]
-  pull_request:
-    # The branches below must be a subset of the branches above
-    branches: [master]
-  schedule:
-    - cron: '0 18 * * 1'
+#  push:
+#    branches: [master]
+#  pull_request:
+#    # The branches below must be a subset of the branches above
+#    branches: [master]
+#  schedule:
+#    - cron: '0 18 * * 1'
+  workflow_dispatch:
 
 # Cancels all previous workflow runs for pull requests that have not completed.
 concurrency:
