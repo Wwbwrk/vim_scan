@@ -1,8 +1,7 @@
 name: Coverity Scan v9.0.2153
-on:
+on: workflow_dispatch
 #  schedule:
 #    - cron: '42 0 * * *'  # Run once per day, to avoid Coverity's submission limits
-  workflow_dispatch:
 
 permissions:
   contents: read # to fetch code (actions/checkout)
@@ -28,7 +27,6 @@ jobs:
       - name: Download Coverity
         if: env.TOKEN
         run: |
-#          wget -q https://scan.coverity.com/download/cxx/linux64 --post-data "token=$TOKEN&project=vim" -O coverity_tool.tgz
           wget https://scan.coverity.com/download/cxx/linux64 --post-data "token=$TOKEN&&project=Wwbwrk%2Fvim_scan" -O coverity_tool.tgz
           mkdir cov-scan
           tar ax -f coverity_tool.tgz --strip-components=1 -C cov-scan
