@@ -94,6 +94,6 @@ jobs:
           echo "The name of your branch is ${{ github.ref }} and your repository is ${{ github.repository }}."
           echo "list /src/version.h"
           cat ${{ github.workspace }}/src/version.h
-          echo "This job's status is ${{ job.status }}.
+          echo "This job's status is ${{ job.status }}."
           echo "ls -l ${{ github.workspace }}"
 
