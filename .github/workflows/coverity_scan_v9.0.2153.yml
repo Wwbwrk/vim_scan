@@ -22,7 +22,7 @@ jobs:
         uses: actions/checkout@v4
 # SPECIFY Release
         with:
-          ref: v9.0.2153
+          ref: refs/tags/v9.0.2153
       - run: echo "after ref"
 
       - name: Download Coverity
