@@ -22,7 +22,8 @@ jobs:
         uses: actions/checkout@v4
         with:
           ref: v9.0.2153
-      - run: echo "after tag ref"
+        run: |
+          echo "after tag ref"
 
       - name: Download Coverity
         if: env.TOKEN
