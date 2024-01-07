@@ -20,9 +20,10 @@ jobs:
       - name: Checkout repository from github
         if: env.TOKEN
         uses: actions/checkout@v4
-# SPECIFY Release
         with:
           ref: v9.0.2153
+      - run: echo "after tag ref"
+
       - name: Download Coverity
         if: env.TOKEN
         run: |
