@@ -24,7 +24,7 @@ jobs:
         with:
           ref: v9.0.2153
 
-     - name: Download Coverity
+      - name: Download Coverity
         if: env.TOKEN
         run: |
 #          wget -q https://scan.coverity.com/download/cxx/linux64 --post-data "token=$TOKEN&project=vim" -O coverity_tool.tgz
