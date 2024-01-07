@@ -23,9 +23,6 @@ jobs:
 # SPECIFY Release
         with:
           ref: refs/tags/v9.0.2153
-
-        run: echo "after ref"
-
       - name: Download Coverity
         if: env.TOKEN
         run: |
