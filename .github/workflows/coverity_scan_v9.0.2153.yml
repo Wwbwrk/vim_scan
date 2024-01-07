@@ -28,7 +28,7 @@ jobs:
         if: env.TOKEN
         run: |
 #          wget -q https://scan.coverity.com/download/cxx/linux64 --post-data "token=$TOKEN&project=vim" -O coverity_tool.tgz
-           wget https://scan.coverity.com/download/cxx/linux64 --post-data "token=$TOKEN&&project=Wwbwrk%2Fvim_scan" -O coverity_tool.tgz
+          wget https://scan.coverity.com/download/cxx/linux64 --post-data "token=$TOKEN&&project=Wwbwrk%2Fvim_scan" -O coverity_tool.tgz
           mkdir cov-scan
           tar ax -f coverity_tool.tgz --strip-components=1 -C cov-scan
 
