@@ -86,9 +86,11 @@ jobs:
 #        env:
 #          EMAIL: ${{ secrets.COVERITY_SCAN_EMAIL }}
 #
+#echo "$(pwd)/cov-scan/bin"
       - name: end info
         run: |
-          : #echo "$(pwd)/cov-scan/bin"
+          echo "$(pwd)"
+          dir "C:\Program Files\Microsoft Visual Studio\2022\Enterprise"
           echo "GITHUB_PATH = $GITHUB_PATH"
           echo "GITHUB_ENV = $GITHUB_ENV"
           echo "This job is now running on a ${{ runner.os }} server hosted by GitHub!"
