@@ -71,6 +71,7 @@ jobs:
         if: env.TOKEN
         run: |
           cov-build --dir cov-int make -j${NPROC}
+          tail cov-int/build-log.txt
 
       - name: Submit results
         if: env.TOKEN
