@@ -91,12 +91,14 @@ jobs:
         shell: pwsh
         run: |
           dir env:path
-          get-childitem -recurse nmake*
+          get-childitem -recurse "C:\Program Files\Microsoft Visual Studio\2022\Enterprise" n*
           $d = get-childitem -recurse nmake*
-          & "$d.fullname" @("/?")
+          if ($d.length -eq 1) { & "$d.fullname" @("/?") } else { "more than 1" }
+
       - name: end info also
         shell: pwsh
         run: |
+          echo $PSversiontable
           $PSversiontable
           echo "$(pwd)"
           dir "C:\Program Files\Microsoft Visual Studio\2022\Enterprise"
