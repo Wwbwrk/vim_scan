@@ -88,6 +88,10 @@ jobs:
 #
 #echo "$(pwd)/cov-scan/bin"
       - name: end info
+        shell: pwsh
+        run: |
+          dir env:path
+          nmake /?
         run: |
           echo "$(pwd)"
           dir "C:\Program Files\Microsoft Visual Studio\2022\Enterprise"
