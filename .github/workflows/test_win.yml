@@ -93,7 +93,7 @@ jobs:
           dir env:path
           get-childitem -recurse nmake*
           $d = get-childitem -recurse nmake*
-          $d.fullname /?
+          & "$d.fullname" @("/?")
       - name: end info also
         shell: pwsh
         run: |
