@@ -99,15 +99,13 @@ jobs:
         shell: pwsh
         run: |
           echo $PSversiontable
-          $PSversiontable
           echo "$(pwd)"
           dir "C:\Program Files\Microsoft Visual Studio\2022\Enterprise"
           echo "GITHUB_PATH = $env:GITHUB_PATH"
           echo "GITHUB_ENV = $env:GITHUB_ENV"
-          echo "This job is now running on a $env:runner.os server hosted by GitHub!"
-          echo "The name of your branch is $env:github.ref and your repository is $env:github.repository."
-          cat \src\version.h
-          cat $($env:github.workspace + "\src\version.h")
-          echo "This job's status is $env:job.status."
+          echo "This job is now running on a ${{ runner.os }} server hosted by GitHub!"
+          echo "The name of your branch is ${{ github.ref }} and your repository is ${{ github.repository }}."
+          cat ("${{ github.workspace}}" + "\src\version.h")
+          echo "This job's status is ${{ job.status }}."
           echo "ls -l ${{ github.workspace }}"
 
