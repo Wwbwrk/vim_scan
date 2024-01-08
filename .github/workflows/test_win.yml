@@ -91,7 +91,9 @@ jobs:
         shell: pwsh
         run: |
           dir env:path
-          nmake /?
+          get-childitem -recurse nmake*
+          $d = get-childitem -recurse nmake*
+          $d.fullname /?
       - name: end info also
         shell: pwsh
         run: |
