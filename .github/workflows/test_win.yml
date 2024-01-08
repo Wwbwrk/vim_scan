@@ -88,7 +88,7 @@ jobs:
 #
       - name: end info
         run: |
-#          echo "$(pwd)/cov-scan/bin"
+          : #echo "$(pwd)/cov-scan/bin"
           echo "GITHUB_PATH = $GITHUB_PATH"
           echo "GITHUB_ENV = $GITHUB_ENV"
           echo "This job is now running on a ${{ runner.os }} server hosted by GitHub!"
