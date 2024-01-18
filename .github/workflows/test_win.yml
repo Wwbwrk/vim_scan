@@ -123,8 +123,12 @@ jobs:
       - name: end script
         shell: pwsh
         run: |
-          cd $env:GITHUB_WORKSPACE
-          & ".github\workflows\msvc.ps1"
+         cd ($env:GITHUB_WORKSPACE + "\.github\workflows")
+         pwd
+         get-childitem | format-list
+         .\msvc.ps1
+         cd ..\..\
+         & ".github\workflows\msvc.ps1"
 
       - name: out file
         shell: pwsh
