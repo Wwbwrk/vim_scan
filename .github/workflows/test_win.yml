@@ -115,7 +115,7 @@ jobs:
         run: |
           cd $env:GITHUB_WORKSPACE
           pwd
-          cat .\.github\workflows\msvc.ps1
+          cat ($env:GITHUB_WORKSPACE + "\.github\workflows\msvc.ps1")
 
       - name: end script
         shell: pwsh
