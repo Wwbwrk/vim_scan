@@ -128,7 +128,7 @@ jobs:
           get-childitem 
           cat .\msvc.ps1
           .\msvc.ps1
-          cd ..\..\
+          cd "..\..\"
           & ".github\workflows\msvc.ps1"
 
       - name: out file
