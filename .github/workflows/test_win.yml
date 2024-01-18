@@ -19,8 +19,8 @@ jobs:
       - name: Checkout repository from github
         if: env.TOKEN
         uses: actions/checkout@v4
-        with:
-          ref: v9.1.0000
+#        with:
+#          ref: v9.1.0000
       - run: |
           echo "after tag ref"
 
@@ -114,10 +114,11 @@ jobs:
         shell: pwsh
         run: |
           cd $env:GITHUB_WORKSPACE
-          echo "$(pwd)"
-          echo "$(get-childitem)"
+          pwd
+          get-childitem
           cat ("${{ github.workspace}}" + "\.github\workflows\msvc.ps1")
           cat ($env:GITHUB_WORKSPACE + "\.github\workflows\msvc.ps1")
+          cat .github\workflows\msvc.ps1
 
       - name: end script
         shell: pwsh
