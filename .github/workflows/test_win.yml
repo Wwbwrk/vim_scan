@@ -110,10 +110,15 @@ jobs:
           echo "This job's status is ${{ job.status }}."
           echo "ls -l ${{ github.workspace }}"
 
+      - name: end script look
+        shell: pwsh
+        run: |
+          cat .github\workflows\msvc.ps1
+
       - name: end script
         shell: pwsh
         run: |
-          ./.github/workflows/msvc.ps1
+          .\.github\workflows\msvc.ps1
 
       - name: out file
         shell: pwsh
