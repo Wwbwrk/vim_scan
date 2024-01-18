@@ -95,7 +95,8 @@ jobs:
         run: |
           dir env:path
           dir env:
-          dir env: | out-file scan/out.txt -encoding ASCII
+          dir env: | out-file scan\out.txt -encoding ASCII
+          cat scan\out.txt 
 
       - name: end info also
         shell: pwsh
