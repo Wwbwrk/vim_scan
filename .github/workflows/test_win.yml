@@ -126,8 +126,8 @@ jobs:
           cd ($env:GITHUB_WORKSPACE + "\.github\workflows")
           pwd
           get-childitem 
-        run: .\msvc.ps1
-        run: |
+          cat .\msvc.ps1
+          .\msvc.ps1
           cd ..\..\
           & ".github\workflows\msvc.ps1"
 
