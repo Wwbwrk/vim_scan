@@ -8,7 +8,7 @@
 $vsbuild = "C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Auxiliary\Build"
 
 pushd $vsbuild
-clear
+#clear
 
 # run .bat (for x64 arch) in command line then use SET command to show all environment variables
 #   and convert to environment variables in Powershell
