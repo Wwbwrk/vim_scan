@@ -124,7 +124,7 @@ jobs:
         shell: pwsh
         run: |
           cd $env:GITHUB_WORKSPACE
-          .\.github\workflows\msvc.ps1
+          & ".github\workflows\msvc.ps1"
 
       - name: out file
         shell: pwsh
