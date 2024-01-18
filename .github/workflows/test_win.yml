@@ -113,16 +113,19 @@ jobs:
       - name: end script look
         shell: pwsh
         run: |
+          cd $env:GITHUB_WORKSPACE
           cat .github\workflows\msvc.ps1
 
       - name: end script
         shell: pwsh
         run: |
+          cd $env:GITHUB_WORKSPACE
           .\.github\workflows\msvc.ps1
 
       - name: out file
         shell: pwsh
         run: |
           echo $env:GITHUB_WORKSPACE
-          dir env: | out-file ($env:GITHUB_WORKSPACE + "scan\out.txt") -encoding ASCII
+          cd $env:GITHUB_WORKSPACE
+          dir env: | out-file scan\out.txt -encoding ASCII
           cat scan\out.txt 
