@@ -22,6 +22,7 @@ cmd /c "vcvarsall.bat x86&set" | foreach {
 
 popd
 
-write-Host "`nVisual Studio 2022 Command Prompt variables set." -ForegroundColor Yellow
+#write-Host "`nVisual Studio 2022 Command Prompt variables set." -ForegroundColor Yellow
+echo "`nVisual Studio 2022 Command Prompt variables set."
 
 
