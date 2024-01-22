@@ -120,6 +120,21 @@ jobs:
           cat ($env:GITHUB_WORKSPACE + "\.github\workflows\msvc.ps1")
           cat .github\workflows\msvc.ps1
 
+      - name: vswhere
+        shell: pwsh
+        run: |
+          cd $env:GITHUB_WORKSPACE
+          $where = "C:\Program Files (x86)\Microsoft Visual Studio\Installer\vswhere"
+          & $where @("-products *", "-latest", "-property installationPath")
+          & $where @("-?")
+          $vsbuild = "C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Auxiliary\Build"
+          echo $vsbuild
+#
+#https://github.com/microsoft/vswhere
+#
+#
+#
+#
       - name: end script
         shell: pwsh
         run: |
@@ -138,3 +153,9 @@ jobs:
           cd $env:GITHUB_WORKSPACE
           dir env: | out-file scan\out.txt -encoding ASCII
           cat scan\out.txt 
+
+      - name: Archive out file
+        uses: actions/upload-artifact@v4
+        with:
+          name: out.txt
+          path: scan\out.txt
