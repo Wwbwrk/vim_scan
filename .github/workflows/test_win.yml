@@ -121,7 +121,7 @@ jobs:
           #cat .github\workflows\msvc.ps1
 
 #          cd $env:GITHUB_WORKSPACE
-     - name: vswhere
+      - name: vswhere
         shell: pwsh
         run: |
           $where = "C:\Program Files (x86)\Microsoft Visual Studio\Installer\vswhere"
@@ -130,7 +130,7 @@ jobs:
           $vsbuild = "C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Auxiliary\Build"
           echo $vsbuild
 
-     - name: powershell VSSetup
+      - name: powershell VSSetup
         shell: pwsh
         run: |
           Install-Module VSSetup
