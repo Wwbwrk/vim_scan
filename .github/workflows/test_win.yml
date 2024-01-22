@@ -116,9 +116,9 @@ jobs:
           cd $env:GITHUB_WORKSPACE
           pwd
           get-childitem
-          cat ("${{ github.workspace}}" + "\.github\workflows\msvc.ps1")
-          cat ($env:GITHUB_WORKSPACE + "\.github\workflows\msvc.ps1")
-          cat .github\workflows\msvc.ps1
+          #cat ("${{ github.workspace}}" + "\.github\workflows\msvc.ps1")
+          #cat ($env:GITHUB_WORKSPACE + "\.github\workflows\msvc.ps1")
+          #cat .github\workflows\msvc.ps1
 
 #          cd $env:GITHUB_WORKSPACE
       - name: vswhere
